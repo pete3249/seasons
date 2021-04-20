@@ -3,7 +3,7 @@ import React from 'react';
 
 const seasonConfig = {
     summer: {
-        text: "Lets hit the beach",
+        text: "Let's hit the beach",
         iconName: 'sun'
     },
     winter: {
@@ -20,9 +20,9 @@ const getSeason = (lat, month) => {
     }
 };
 
-const SeasonDisplay = (props) => {
+const SeasonDisplay = props => {
     const season = getSeason(props.lat, new Date().getMonth());
-    const {text, iconName } = seasonConfig[season]
+    const { text, iconName } = seasonConfig[season]
 
     return (
         <div className={`season-display ${season}`}>
@@ -33,4 +33,4 @@ const SeasonDisplay = (props) => {
     );
 };
 
-export default SeasonDisplay
+export default SeasonDisplay;
